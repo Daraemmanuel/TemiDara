@@ -227,32 +227,48 @@ footer {
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
   h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
+    margin: 30px 0 15px;
   }
 
   h2 {
-    font-size: 2.2rem;
-  }
-
-  .open-btn {
-    padding: 20px 40px;
     font-size: 1.8rem;
   }
 
+  p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+
+  .open-btn {
+    padding: 18px 36px;
+    font-size: 1.6rem;
+  }
+
   section {
-    padding: 25px 20px;
-    margin: 25px 0;
+    padding: 25px 18px;
+    margin: 20px 0;
+    border-radius: 20px;
   }
 
   #timer {
-    gap: 5px;
+    gap: 6px;
   }
 
   .timer-unit {
-    padding: 10px 2px;
+    padding: 8px 4px;
   }
 
   .timer-val {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+  }
+
+  .timer-label {
+    font-size: 0.6rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 0 10px;
   }
 }
