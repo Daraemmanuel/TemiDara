@@ -63,6 +63,75 @@ function openSurprise() {
     setTimeout(createHeart, Math.random() * 1000);
   }
   setInterval(createHeart, 400);
+
+  // Initialize Scroll Reveal
+  initScrollReveal();
+
+  // Highlight music widget as playing
+  document.getElementById("music-widget").classList.add("playing");
+}
+
+// ❤️ Music Widget Logic
+function toggleMusic() {
+  const music = document.getElementById("bg-music");
+  const widget = document.getElementById("music-widget");
+
+  if (music.paused) {
+    music.play();
+    widget.classList.add("playing");
+  } else {
+    music.pause();
+    widget.classList.remove("playing");
+  }
+}
+
+// ❤️ Scroll Reveal Logic
+function initScrollReveal() {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    },
+    { threshold: 0.1 },
+  );
+
+  document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+}
+
+// ❤️ Virtual Hug Logic
+function sendHug() {
+  const btn = document.querySelector(".hug-btn");
+  btn.innerHTML = "Hug Sent! ❤️";
+  btn.style.background = "#ff758c";
+
+  // Blast of hearts
+  for (let i = 0; i < 30; i++) {
+    setTimeout(() => {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "💖";
+      heart.style.left = "50vw";
+      heart.style.top = "80vh";
+
+      // Random direction for explosion
+      const tx = (Math.random() - 0.5) * 400 + "px";
+      const ty = -(Math.random() * 400 + 100) + "px";
+      const tr = Math.random() * 360 + "deg";
+
+      heart.style.setProperty("--tx", tx);
+      heart.style.setProperty("--ty", ty);
+      heart.style.setProperty("--tr", tr);
+
+      heart.style.fontSize = Math.random() * 30 + 20 + "px";
+      heart.style.animation = `floatExplode ${Math.random() * 2 + 1}s ease-out forwards`;
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 3000);
+    }, i * 50);
+  }
 }
 
 // ❤️ Love Letter Typing Effect

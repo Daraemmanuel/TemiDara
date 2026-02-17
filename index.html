@@ -20,24 +20,35 @@
       <source src="song.mp3" type="audio/mpeg" />
     </audio>
 
+    <!-- Floating Hearts -->
+    <div id="hearts-container"></div>
+
+    <!-- Music Widget -->
+    <div id="music-widget" onclick="toggleMusic()">
+      <div class="music-icon">🎵</div>
+      <div class="music-waves" id="waves">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+
     <div class="container" id="main-container">
       <h1>For Temi ❤️</h1>
 
-      <section class="photo">
+      <section class="photo reveal">
         <img src="img/us.jpg" alt="Us" />
       </section>
 
-      <section class="letter">
+      <section class="letter reveal">
         <h2>A Letter To You</h2>
         <p id="typed-text"></p>
       </section>
 
-      <section class="countdown">
+      <section class="countdown reveal">
         <h2>Countdown Until I See You Next Week</h2>
         <div id="timer"></div>
       </section>
 
-      <section class="future-date">
+      <section class="future-date reveal">
         <h2>Our Next Date Plan</h2>
         <p>
           When I see you next week, I’m taking you out or will cook for you a
@@ -46,6 +57,34 @@
           saving.
         </p>
       </section>
+
+      <section class="reasons reveal">
+        <h2>Reasons Why I Love You</h2>
+        <div class="reasons-grid">
+          <div class="reason-card">
+            <span>✨</span>
+            <p>The way you smile even at the smallest things.</p>
+          </div>
+          <div class="reason-card">
+            <span>🌸</span>
+            <p>Your beautiful heart that cares so deeply.</p>
+          </div>
+          <div class="reason-card">
+            <span>💡</span>
+            <p>How you make everything feel easier just by talking.</p>
+          </div>
+          <div class="reason-card">
+            <span>🌈</span>
+            <p>The energy you bring into my life every day.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="hug-section reveal">
+        <button class="hug-btn" onclick="sendHug()">
+          Send Me A Hug Back ❤️
+        </button>
+      </div>
 
       <footer>
         Built with love by someone who is crazy about you ❤️ TemiDara
