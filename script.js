@@ -55,7 +55,7 @@ function openSurprise() {
   }, 1000);
 
   // Play music (handle browsers that might still block it)
-  music.currentTime = 10;
+  // music.currentTime = 10;
   music.volume = 0.5;
   music.play().catch((e) => console.log("Audio play blocked or failed", e));
 
