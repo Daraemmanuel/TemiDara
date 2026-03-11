@@ -150,7 +150,8 @@ The way you made everything feel lighter.
 
 That was the moment.
 
-I couldn’t give you anything on Valentine’s Day,
+Valentine’s Day came with a little something from me, 
+though I wish I could have given you something more.
 but I hope this shows you something important:
 
 Even when I don't have what it take,
